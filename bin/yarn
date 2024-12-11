@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Forward the command to the globally installed Yarn
+exec yarn "$@"
