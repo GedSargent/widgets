@@ -8,6 +8,10 @@ gem "dotenv-rails", groups: [:development, :test]
 # dependencies for known vulnerabilities
 gem "bundler-audit"
 
+# lograge changes Rails' logging to a more
+# traditional one-line-per-event format
+gem "lograge"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.0", ">= 8.0.0.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
