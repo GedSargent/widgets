@@ -14,7 +14,9 @@
 
 ## Running the app
 
-- `bin/run`
+- `dx/start` - starts the app
+- `dx/exec bash` - inside another terminal. Gets you a prompt into the container where you can run commands
+- `bin/run` - runs the app
 
 ## Tests and CI
 
