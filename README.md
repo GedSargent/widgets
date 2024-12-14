@@ -10,12 +10,12 @@
 5. `dx/build` - this will build a Docker image you will use to start a container in which development can happen
 6. `dx/start` - this will use Docker Compose to start three containers: a linux dev box using the image you built in the previous step (which is where you will run Rails), Postgres, and Redis.
 7. In another terminal, you can do `dx/exec bash` to get a prompt into the container where you will do dev work. You can also issue commands directly, e.g. `dx/exec rails --help`
-8. Once inside your dockerised terminal, run `bin/setup`
 
 ## Running the app
 
 - `dx/start` - starts the app
 - `dx/exec bash` - inside another terminal. Gets you a prompt into the container where you can run commands
+- `bin/setup` (once inside the containerized shell) - sets up the app
 - `bin/run` - runs the app
 
 ## Tests and CI

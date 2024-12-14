@@ -1,0 +1,23 @@
+<h1><%= @widget.name %></h1>
+<h2>ID #<%= @widget.id %></h2>
+<% if flash[:notice] %>
+<aside>
+  <%= flash[:notice] %>
+</aside>
+<% end %>
+<section>
+  <div style="display: flex; margin: 0; gap: 1rem;">
+    <h3>Rate This Widget: </h3>
+    <ol style="display: flex; gap: 0.5rem; align-items: center; list-style: none; padding: 0; margin: 0;">
+      <% (1...5).each do |rating| %>
+      <li>
+        <%= button_to rating,
+                      widget_ratings_path,
+                      params: { widget_id: @widget.id, rating: rating }
+        %>
+      </li>
+      <% end %>
+    </ol>
+  </div>
+  <p>Your ratings help us be amazing!</p>
+</section>
