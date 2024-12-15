@@ -9,4 +9,7 @@
   Built by: <%= @widget.manufacturer.name %> out of <%= @widget.manufacturer.address.country %>
 </h3>
 
-<%= render partial: 'rating', locals: { widget: @widget } %>
+<%= render(WidgetRatingComponent.new(
+  widget: @widget,
+  show_cta: false
+)) %>

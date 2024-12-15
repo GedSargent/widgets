@@ -12,6 +12,13 @@ gem "bundler-audit"
 # traditional one-line-per-event format
 gem "lograge"
 
+# View Component is used to manage
+# and test complex view logic
+# Generator call: bin/rails generate component <Class> <parameters>
+# e.g. bin/rails generate component WidgetRating widget show_cta
+# Restart server after generating component(s)
+gem "view_component"
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 8.0.0", ">= 8.0.0.1"
 # The modern asset pipeline for Rails [https://github.com/rails/propshaft]
