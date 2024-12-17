@@ -23,5 +23,8 @@ module Widgets
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    # Only include controller-specific helpers for that
+    # controller's views.
+    config.action_controller.include_all_helpers = false
   end
 end
