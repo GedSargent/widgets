@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .headline {
+    @apply text-8xl text-heading font-bold mb-16 mt-8;
+  }
+  .subheadline {
+    @apply text-7xl text-heading font-semibold mb-8 mt-6;
+  }
+  .paragraph-header {
+    @apply text-5xl text-heading my-4;
+  }
+  .copy {
+      @apply text-4xl text-copy my-2;
+  }
+}
+

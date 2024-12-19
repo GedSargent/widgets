@@ -26,5 +26,9 @@ module Widgets
     # Only include controller-specific helpers for that
     # controller's views.
     config.action_controller.include_all_helpers = false
+
+    # Sprokets 3 update config
+    # https://github.com/rails/sprockets/blob/070fc01947c111d35bb4c836e9bb71962a8e0595/UPGRADING.md#manifestjs
+    config.assets.precompile = ["manifest.js"]
   end
 end

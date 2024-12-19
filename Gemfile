@@ -12,6 +12,17 @@ gem "bundler-audit"
 # traditional one-line-per-event format
 gem "lograge"
 
+# Tailwind CSS is a utility-first CSS framework
+gem "tailwindcss-rails", "~> 3.0"
+
+# Tachyons is a functional CSS framework
+# we'll use to style our views
+# gem "tachyonscss-rails"
+
+# tacyonscss-rails embed a SASS version of Tachyons,
+# so we need to include a SASS compiler
+# gem "sassc-rails"
+
 # View Component is used to manage
 # and test complex view logic
 # Generator call: bin/rails generate component <Class> <parameters>

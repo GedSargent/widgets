@@ -1,0 +1,35 @@
+<% fonts = %w[headline subheadline paragraph-header copy] %>
+<% colors = %w[bg-heading bg-copy bg-green bg-red bg-orange bg-brand-primary bg-brand-secondary] %>
+
+<section class="container mx-auto">
+  <h1 class="headline text-center">
+    Design System Docs
+  </h1>
+  <nav class="flex gap-4 mb-16 justify-center">
+    <a href="#font-sizes">Font Sizes</a> |
+    <a href="#colors">Colors</a> |
+    <a href="https://tailwindcss.com/docs/">Tailwind Docs</a>
+  </nav>
+
+  <h2 id="font-sizes" class="subheadline">Font Sizes</h2>
+  <% fonts.each do |font_css_class| %>
+    <div class="flex flex-wrap gap-4 border-y pt-8">
+      <p class="<%= font_css_class %>">
+        "<%= font_css_class %>" Font Class
+      </p>
+      <code class="text-white">
+        &lt;p class="<%= font_css_class %>"&gt;
+        <%= font_css_class %> Font Class &lt;/p&gt;
+      </code>
+    </div>
+  <% end %>
+
+  <h2 id="colors" class="subheadline">Colors</h2>
+  <% colors.each do |color_class| %>
+    <div class="<%= color_class %> p-8">
+      <code class="text-white">
+        &lt;div class="<%= color_class %>"&gt;<%= color_class %>&lt;/div&gt;
+      </code>
+    </div>
+  <% end %>
+</section>

@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
+  if Rails.env.development?
+    resources :design_system_docs, only: [:index]
+  end
+
   ####
   # Custom routes start here
   #

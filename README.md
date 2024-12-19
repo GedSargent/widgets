@@ -3,7 +3,7 @@
 ## Setup
 
 1. Pull down the app from version control
-2. If you are developing on Windows, its best to use a Linux bash terminal. An easy way to do this is by installing [Git Bash](https://gitforwindows.org/) on your machine.
+2. If you are developing on Windows, it's best to use a Linux bash terminal. An easy way to do this is by installing [Git Bash](https://gitforwindows.org/) on your machine.
 3. Copy the contents of `.example.env.development` and paste into a new `.env.development` file
 4. Copy the contents of `.example.env.test`, then paste into a new `.env.test` file.
    - We are fine to do this here in a demo app, but in a real production context make sure to keep these values secret.
@@ -17,6 +17,7 @@
 - `dx/exec bash` - inside another terminal. Gets you a prompt into the container where you can run commands
 - `bin/setup` (once inside the containerized shell) - sets up the app
 - `bin/run` - runs the app
+- `bin/rails tailwindcss:watch` - starts the TailwindCSS watcher
 
 ## Tests and CI
 
