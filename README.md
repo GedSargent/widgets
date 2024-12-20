@@ -13,11 +13,26 @@
 
 ## Running the app
 
-- `dx/start` - starts the app
-- `dx/exec bash` - inside another terminal. Gets you a prompt into the container where you can run commands
-- `bin/setup` (once inside the containerized shell) - sets up the app
-- `bin/run` - runs the app
-- `bin/rails tailwindcss:watch` - starts the TailwindCSS watcher
+- Start the app:
+   ```bash
+   dx/start`
+  ```
+- Inside a second terminal, open docker shell:
+   ```bash
+   dx/exec bash
+   ``` 
+- Once inside the containerized shell, set up the app:
+   ```bash
+   bin/setup
+   ```
+- Run the app:
+   ```bash
+   bin/run
+   ```
+- In a third terminal, start the TailwindCSS watcher:
+   ```bash
+   dx/exec bin/rails tailwindcss:watch
+   ```
 
 ## Tests and CI
 
