@@ -1,15 +1,17 @@
-<h1><%= @widget.name %></h1>
-<h2>ID #<%= styled_widget_id(@widget) %></h2>
-<% if flash[:notice] %>
-<aside>
-  <%= flash[:notice] %>
-</aside>
-<% end %>
-<h3>
-  Built by: <%= @widget.manufacturer.name %> out of <%= @widget.manufacturer.address.country %>
-</h3>
+<div>
+  <h1 class="headline"><%= @widget.name %></h1>
+  <h2 class="subheadline">ID #<%= styled_widget_id(@widget) %></h2>
+  <% if flash[:notice] %>
+  <aside>
+    <%= flash[:notice] %>
+  </aside>
+  <% end %>
+  <h3>
+    Built by: <%= @widget.manufacturer.name %> out of <%= @widget.manufacturer.address.country %>
+  </h3>
 
-<%= render(WidgetRatingComponent.new(
-  widget: @widget,
-  show_cta: false
-)) %>
+  <%= render(WidgetRatingComponent.new(
+    widget: @widget,
+    show_cta: false
+  )) %>
+</div>

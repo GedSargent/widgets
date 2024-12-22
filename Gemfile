@@ -26,7 +26,7 @@ gem "tailwindcss-rails", "~> 3.0"
 # View Component is used to manage
 # and test complex view logic
 # Generator call: bin/rails generate component <Class> <parameters>
-# e.g. bin/rails generate component WidgetRating widget show_cta
+# e.g. bin/rails generate component WidgetRating widget_ratings show_cta
 # Restart server after generating component(s)
 gem "view_component"
 

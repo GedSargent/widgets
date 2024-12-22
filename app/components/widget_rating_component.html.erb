@@ -1,15 +1,25 @@
 <section>
-  <div style="display: flex; margin: 0; gap: 1rem;">
-    <h3>Rate This Widget: </h3>
+  <div data-rating-present style="display: none;">
+    <p class="paragraph-header">Thanks for rating this a
+      <span data-rating-label></span>
+    </p>
+  </div>
+  <div class="flex m-0 gap-4" data-no-rating-present>
+    <h3 class="paragraph-header">Rate This Widget: </h3>
     <ol style="display: flex; gap: 0.5rem; align-items: center; list-style: none; padding: 0; margin: 0;">
       <% (1...5).each do |rating| %>
       <li>
         <%= button_to rating,
                       widget_ratings_path,
+                      remote: true,
+                      data: {
+                        rating: true
+                      },
                       params: {
                         widget_id: widget.id,
                         rating: rating
-                      }
+                      },
+                      class: "paragraph-header w-4 h-4 rounded bg-brand-primary text-white"
         %>
       </li>
       <% end %>
