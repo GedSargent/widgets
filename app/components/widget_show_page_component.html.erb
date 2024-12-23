@@ -1,5 +1,6 @@
 <div>
-  <h1 class="headline"><%= @widget.name %></h1>
+  <h1 class="headline">Widget Information</h1>
+  <h2 data-testid="widget-name" class="subheadline"><%= @widget.name %></h2>
   <h2 class="subheadline">ID #<%= styled_widget_id(@widget) %></h2>
   <% if flash[:notice] %>
   <aside>

@@ -1,4 +1,4 @@
-require 'ostruct'
+require "ostruct"
 
 class WidgetsController < ApplicationController
   def show
@@ -10,12 +10,17 @@ class WidgetsController < ApplicationController
         country: "UK"
       )
     )
-    @widget = OpenStruct.new(
-      id: params[:id],
-      manufacturer_id: manufacturer.id,
-      manufacturer: manufacturer,
-      name: "Widget #{params[:id]}"
-    )
+    widget_name = if params[:id].to_i == 1234
+                    "Stembolt"
+    else
+                    "Widget #{params[:id]}"
+    end
+    @widget = OpenStruct.new(id: params[:id],
+                             manufacturer_id: manufacturer.id,
+                             manufacturer: manufacturer,
+                             # START:edit:3
+                             name: widget_name)
+    # END:edit:3
     def @widget.widget_id
       if self.id.to_s.length < 3
         self.id.to_s
@@ -25,11 +30,10 @@ class WidgetsController < ApplicationController
       end
     end
   end
-
   def index
     @widgets = [
-      OpenStruct.new(id: 1, name: "Stembolt"),
-      OpenStruct.new(id: 2, name: "Flux Capacitor"),
+      OpenStruct.new(id: 1234, name: "Stembolt"),
+      OpenStruct.new(id: 2, name: "Flux Capacitor")
     ]
   end
 end
