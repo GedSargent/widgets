@@ -18,6 +18,6 @@ class ViewWidgetTest < ApplicationSystemTestCase
     assert_selector "[data-testid='widget-name']",
                     text: widget_name_regexp
     # Look for the formatted widget ID within a span tag
-    with_clues { assert_selector "h2 span", text: "0001234" }
+    with_clues { assert_selector "h2 span", text: formatted_widget_id_regexp }
   end
 end
