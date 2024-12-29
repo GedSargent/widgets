@@ -29,6 +29,10 @@ module Widgets
 
     # Sprokets 3 update config
     # https://github.com/rails/sprockets/blob/070fc01947c111d35bb4c836e9bb71962a8e0595/UPGRADING.md#manifestjs
-    config.assets.precompile = ["manifest.js"]
+    config.assets.precompile = [ "manifest.js" ]
+
+    # We want to be able to use any feature of our database,
+    # and the SQL format makes that possible
+    config.active_record.schema_format = :sql
   end
 end
