@@ -13,7 +13,7 @@ gem "bundler-audit"
 gem "lograge"
 
 # Tailwind CSS is a utility-first CSS framework
-gem "tailwindcss-rails", "~> 3.0"
+gem "tailwindcss-rails", "~> 3.3"
 
 # Tachyons is a functional CSS framework
 # we'll use to style our views
